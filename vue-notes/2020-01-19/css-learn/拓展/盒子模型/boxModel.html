@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--块级元素外间距会上下合并，不会左右合并，以最大的距离为主-->
+    <!--margin属性以上右下左为顺序-->
+    <!--浮动元素的外边距也不会合并-->
+    <!--border属性在  style属性为空时不会出现-->
+    <!--padding的宽高要记录在盒子模型的宽高之内,border同理-->
+    <!--content-box　标准盒, 当盒子超出定义的长度时,　会向外拓展-->
+    <!--border-box 　怪异盒, 定义的长度多长总长度就多长,不会向外推展-->
+    <style>
+        body {
+            width: 300px;
+            height: 300px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #cur {
+            background-color: red;
+            /* 会超出body的宽度 */
+            padding-left:300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>顶部元素</div>
+        <div>左侧元素</div>
+        <div id="cur">当前元素</div>
+        <div>右侧元素</div>
+        <div>底部元素</div>
+    </div>
+</body>
+</html>

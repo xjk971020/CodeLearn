@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <login ref="login"></login>
+        <input type="button" value="获取dom" @click="getElement">
+        <h3 ref = "myh3">ref获取dom</h3>
+    </div>
+</body>
+<script>
+
+    var login = {
+        template : "<h1 >登录组件</h1>",
+        methods: {
+            show()  {
+                console.log("调用了子组件的show方法");
+            }
+        },
+        data: function() {
+            return {
+                msg: {name:"小芒果"}
+            }
+        }
+    }
+
+    var Vue = new Vue({
+        el : "#app",
+        data : {
+
+        }, 
+        methods: {
+            getElement() {
+                // console.log(this.$refs.myh3.innerHTML)
+                //获取子组件的引用,并获取子组件数据和方法
+                console.log(this.$refs.login.msg);
+                this.$refs.login.show();
+            }
+        },
+        components: {
+            'login':login
+        }
+    })
+</script>
+</html>

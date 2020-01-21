@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>演示相对定位</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      #box1 {
+        background-color: rebeccapurple;
+      } 
+
+      #box2 {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+        /**绝对定位
+                以其他元素为参照物移动指定的距离
+                绝对定位:被定为的元素不会占据原有的位置
+                1、如果元素的外层元素是非static(有了除默认值之外的定位设置), 那么这个外层元素就成为元素的定位参考点
+                2、如果元素的外层元素没有设置任何position的值,那么该元素将查找离自己最近的有position的元素作为参照物(必须为嵌套曾)
+                如果没有任何父级元素使用了position,则将body作为参照物
+                **/
+        position: relative;
+        /* top: 200px;
+            left : 200px; */
+      }
+
+      #father {
+          margin-left: 20px;
+        width: 200px;
+        height: 200px;
+        background-color: salmon;
+        /* position: relative; */
+      }
+
+      #son {
+        width: 100px;
+        height: 100px;
+        background-color: sienna;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      }
+
+      #box3 {
+        background-color: saddlebrown;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1"></div>
+    <div id="box2">
+      <div id="father">
+        <div id="son"></div>
+      </div>
+    </div>
+    <div id="box3"></div>
+  </body>
+</html>
