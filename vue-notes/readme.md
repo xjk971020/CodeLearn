@@ -13,7 +13,7 @@
 -  Vue指令之`v-model`和`双向数据绑定`
 - 简易计算器案例
 - 在Vue中使用样式
-  - 使用class样式
+  - 使用class样式 
   - 使用内联样式
 -  Vue指令之`v-for`和`key`属性
 - Vue指令之`v-if`和`v-show`
