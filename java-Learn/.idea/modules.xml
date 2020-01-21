@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Netty-Learn.iml" filepath="$PROJECT_DIR$/Netty-Learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleDesignPattern/SimpleDesignPattern.iml" filepath="$PROJECT_DIR$/SimpleDesignPattern/SimpleDesignPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleNioHttpServer/SimpleNioHttpServer.iml" filepath="$PROJECT_DIR$/SimpleNioHttpServer/SimpleNioHttpServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleRPC/SimpleRPC.iml" filepath="$PROJECT_DIR$/SimpleRPC/SimpleRPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleSpirder/SimpleSpirder.iml" filepath="$PROJECT_DIR$/SimpleSpirder/SimpleSpirder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleThread/SimpleThread.iml" filepath="$PROJECT_DIR$/SimpleThread/SimpleThread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleDesignPattern/designPattern.iml" filepath="$PROJECT_DIR$/SimpleDesignPattern/designPattern.iml" />
+    </modules>
+  </component>
+</project>
