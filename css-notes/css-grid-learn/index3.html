@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid-learn</title>
+</head>
+<style>
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 1rem;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+
+    .wrapper > div {
+        background-color: #eee;
+        padding: 1rem;
+    }
+
+    .wrapper > div:nth-child(odd) {
+        background-color: #ddd;
+    }
+
+    /*给网格单独设置*/
+    .box1 {
+        /*align-self: start;*/
+        /*跨越网格，列数从第一个到第三个*/
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .box2 {
+        /*align-self: center;*/
+        grid-column: 3;
+        grid-row: 1/3;
+    }
+
+    .box3 {
+        /*justify-self: end;*/
+        grid-column: 2/4;
+        grid-row: 3;
+    }
+
+    .box4 {
+        grid-row: 2/4;
+        grid-column: 1;
+    }
+</style>
+<body>
+<div class="wrapper">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+    <div class="box box4">Box 4</div>
+</div>
+</body>
+</html>

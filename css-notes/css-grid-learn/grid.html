@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid布局</title>
+</head>
+<style>
+    .wrapper{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+        'header header header'
+        'content content sidebar'
+        'box-1 box-2 box-2'
+        'box-3 box-3 box-3'
+        'footer footer footer';
+    }
+
+    .header {
+        grid-area: header;
+        text-align: center;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .footer {
+        grid-area: footer;
+        text-align: center;
+    }
+
+    .box1 {
+        grid-area: box-1;
+    }
+
+    .box2 {
+        grid-area: box-2;
+    }
+
+    .box3 {
+        grid-area: box-3;
+    }
+
+    .header,
+    .content,
+    .sidebar,
+    .box1,
+    .box2,
+    .box3,
+    .footer {
+        border: 1px #333333 solid;
+    }
+
+    @media(max-width: 500px) {
+        .wrapper{
+            display: grid;
+            grid-template-areas:
+                    'header '
+                    'content'
+                    'sidebar'
+                    'box-1'
+                    'box-2'
+                    'box-3'
+                    'footer';
+        }
+    }
+</style>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <h1>grid-learn</h1>
+    </header>
+    <section class="content">
+        <h1>Helloworld</h1>
+        <p>
+            既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。 你不必像这样对待你。 重要的是安排你的天空的风景，把你的日落引向太阳，把你收集的雨水浓缩在一起。
+            选择云，你的事业不可避免地又厚又轻；你的位置不可避免地会被风吹得很高，突然被大气压得很低；你的名声不可避免地会被人们谈论，你也会被告知。 我也有你。
+            重要的是，你必须把白色的灵魂生活在云中，把你的自由变成一个鲁莽的风景，值得你头顶上的天空信任。 值得你脚下的土地的支持。
+        </p>
+    </section>
+    <aside class="sidebar">
+        <h3>联系我们</h3>
+        <ul>
+            <li>技术部</li>
+            <li>人事</li>
+            <li>AI</li>
+            <li>前端</li>
+        </ul>
+    </aside>
+    <div class="box1">
+        <h3>标题一</h3>
+        <p>
+            既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。 你不必像这样对待你。 重要的是安排你的天空的风景，把你的日落引向太阳，把你收集的雨水浓缩在一起。
+            选择云，你的事业不可避免地又厚又轻；你的位置不可避免地会被风吹得很高，突然被大气压得很低；你的名声不可避免地会被人们谈论，你也会被告知。 我也有你。
+            重要的是，你必须把白色的灵魂生活在云中，把你的自由变成一个鲁莽的风景，值得你头顶上的天空信任。 值得你脚下的土地的支持。
+        </p>
+    </div>
+    <div class="box2">
+        <h3>标题二</h3>
+        <p>
+            既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。 你不必像这样对待你。 重要的是安排你的天空的风景，把你的日落引向太阳，把你收集的雨水浓缩在一起。
+            选择云，你的事业不可避免地又厚又轻；你的位置不可避免地会被风吹得很高，突然被大气压得很低；你的名声不可避免地会被人们谈论，你也会被告知。 我也有你。
+            重要的是，你必须把白色的灵魂生活在云中，把你的自由变成一个鲁莽的风景，值得你头顶上的天空信任。 值得你脚下的土地的支持。
+        </p>
+    </div>
+    <div class="box3">
+        <h3>标题三</h3>
+        <p>
+            既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。 你不必像这样对待你。 重要的是安排你的天空的风景，把你的日落引向太阳，把你收集的雨水浓缩在一起。
+            选择云，你的事业不可避免地又厚又轻；你的位置不可避免地会被风吹得很高，突然被大气压得很低；你的名声不可避免地会被人们谈论，你也会被告知。 我也有你。
+            重要的是，你必须把白色的灵魂生活在云中，把你的自由变成一个鲁莽的风景，值得你头顶上的天空信任。 值得你脚下的土地的支持。
+        </p>
+    </div>
+    <footer class="footer">
+        <p>Copyright&copy;2020</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid-learn</title>
+</head>
+<style>
+    .wrapper {
+        display: grid;
+        /*grid-template-columns: 1fr 2fr 1fr;*/
+        /*最好用fr代表列宽*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        /*grid-auto-rows: 100px;*/
+        /*设置行的最小高度，当内容超过最小高度时，根据内容进行调整*/
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .nested {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        grid-auto-rows: 70px;
+    }
+
+    .wrapper > div {
+        background-color: #eee;
+        padding: 1rem;
+    }
+
+    .wrapper > div:nth-child(odd) {
+        background-color: #ddd;
+    }
+
+    .nested > div {
+        border: 1px #333333 solid;
+        padding: 1rem;
+    }
+</style>
+<body>
+<div class="wrapper">
+    <div>既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。</div>
+    <div>既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。</div>
+    <div>既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。</div>
+    <div class="nested">
+        <div>既然你选择了一片白云</div>
+        <div>既然你选择了一片白云</div>
+        <div>既然你选择了一片白云</div>
+        <div>既然你选择了一片白云</div>
+        <div>既然你选择了一片白云</div>
+        <div>既然你选择了一片白云</div>
+        <div>既然你选择了一片白云</div>
+        <div>既然你选择了一片白云</div>
+    </div>
+    <div>
+        生活使你成为烛光，你需要你的黑暗房间或洞穴。 毫无保留地把你的弱光献给你的生活，在黑暗中增加你的眼睛。 世界将弥补太阳和月亮的疏忽和缺点，因为你明亮的存在。
+        如果你确定你只是一块没有中国的石头，你为什么要期待有一天把你变成一个真正的铺路的石头呢？ 把土壤粘在一起，让年轻人和所有需要你的人踩在你的肩膀上。
+        即使你的名字不为很多人所知，即使电影和电视屏幕永远不会显示你的荣耀，你也配得上你的生活。 生活使你成为烛光，你需要你的黑暗房间或洞穴。 毫无保留地把你的弱光献给你的生活，在黑暗中增加你的眼睛。 世界将弥补太阳和月亮的疏忽和缺点，因为你明亮的存在。
+        如果你确定你只是一块没有中国的石头，你为什么要期待有一天把你变成一个真正的铺路的石头呢？ 把土壤粘在一起，让年轻人和所有需要你的人踩在你的肩膀上。
+        即使你的名字不为很多人所知，即使电影和电视屏幕永远不会显示你的荣耀，你也配得上你的生活。
+    </div>
+    <div>既然你选择了一片白云，它就在蔚蓝的天空中闪耀着数千万只眼睛。</div>
+</div>
+</body>
+</html>
