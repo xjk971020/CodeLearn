@@ -9,7 +9,7 @@ js实现图片懒加载
 
 ···
 
-- 通过img.getBoundiyClientRect()可以得到图片的距离，大小通过window.innerHeight得到可视区域的高度。可以判断图片距离顶部的高度与可视区域高度的比较，若小于，则给图片添加src属性
+- 通过img.getBoundiyClientRect()可以得到图片的位置信息，大小通过window.innerHeight得到可视区域的高度。可以判断图片距离顶部的高度与可视区域高度的比较，若小于，则给图片添加src属性
 
   ```javascript
   let bound = img.getBoundingClientRect()；
@@ -20,4 +20,3 @@ js实现图片懒加载
   ```
 
 -   当页面滚动的时候重复执行以上函数
-
