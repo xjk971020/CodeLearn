@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片滑动特效</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url("./img/bg.jpg");
+    }
+
+    .container {
+        height: 400px;
+        width: 600px;
+        border: 20px white solid;
+        margin: 10px auto;
+        position: relative;
+    }
+
+    .img {
+        height: 400px;
+        width: 600px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /*使用弹性盒进行四等分*/
+        display: flex;
+    }
+
+    .container > input[type=radio] {
+        display: none;
+    }
+
+    .container > label {
+        position:relative;
+        z-index: 9999;
+        width:150px;
+        height:40px;
+        display:block;
+        float:left;
+        top:300px;
+        cursor: pointer;
+    }
+
+    /*这里的样式， 当成span来看就行， 没毛病*/
+    .container > label::before{
+        width:35px;
+        height:35px;
+        border-radius: 50%;
+        background-color:rgba(130,195,213,.9);
+
+        box-shadow: 0px 0px 0px 4px rgba(255,255,255,.3);
+        display:block;
+        position:absolute;
+        left:60px;
+
+        /*文字剧中*/
+        text-align: center;
+        line-height: 35px;
+
+        color:white;
+    }
+
+    .container > label:nth-child(5):before{
+        content:"1";
+    }
+    .container > label:nth-child(6):before{
+        content:"2";
+    }
+    .container > label:nth-child(7):before{
+        content:"3";
+    }
+    .container > label:nth-child(8):before{
+        content:"4";
+    }
+
+    .container > .first:checked ~ label:nth-child(5):before,
+    .container > .second:checked ~ label:nth-child(6):before,
+    .container > .third:checked ~ label:nth-child(7):before,
+    .container > .fourth:checked ~ label:nth-child(8):before{
+        color:rgba(130,195,213,.9);
+        background-color:white;
+    }
+
+    /*放图*/
+    .img > div > span:nth-child(1){
+        background-image: url(img/1.jpg);
+    }
+    .img > div > span:nth-child(2){
+        background-image: url(img/2.jpg);
+    }
+    .img > div > span:nth-child(3){
+        background-image: url(img/3.jpg);
+    }
+    .img > div > span:nth-child(4){
+        background-image: url(img/4.jpg);
+    }
+
+    .img > div:nth-child(1) > span{
+        background-position: 0px 0px;
+    }
+
+    .img > div:nth-child(2) > span{
+        background-position: -150px 0px;
+    }
+
+    .img > div:nth-child(3) > span{
+        background-position: -300px 0px;
+    }
+
+    .img > div:nth-child(4) > span{
+        background-position: -450px 0px;
+    }
+
+    /*添加动画*/
+    .container > .first:checked ~ .img > div > span:nth-child(1),
+    .container > .second:checked ~ .img > div > span:nth-child(2),
+    .container > .third:checked ~ .img > div > span:nth-child(3),
+    .container > .fourth:checked ~ .img > div > span:nth-child(4){
+        z-index: 1000;
+        transition: left 0.5s ease-in-out;
+        animation:none;
+        left:0px;
+    }
+
+    @keyframes move{
+        0%{
+            left:0px;
+        }
+        100%{
+            left:150px;
+        }
+    }
+
+    /*所有的背景进行移动*/
+    input:checked ~ .img > div > span{
+        animation-name:move;
+        animation-delay: 0s;
+        animation-duration:0.6s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img > div {
+        width: 150px;
+        height: 400px;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .img > div > span {
+        position: absolute;
+        left: -150px;
+        top: 0;
+        display: block;
+        width: 150px;
+        height: 400px;
+    }
+
+    /*最后的最后，添加一个边框*/
+    .container > label::after{
+        width:1px;
+        height:400px;
+        background:-webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+        content:"";
+        display:block;
+        position:absolute;
+        right:0;
+        bottom:-60px;
+    }
+</style>
+<body>
+<div class="container">
+    <input type="radio" class="first" id="check_first" name="imgs" checked/>
+    <input type="radio" class="second" id="check_second" name="imgs"/>
+    <input type="radio" class="third" id="check_third" name="imgs"/>
+    <input type="radio" class="fourth" id="check_fourth" name="imgs"/>
+    <label for="check_first"></label>
+    <label for="check_second"></label>
+    <label for="check_third"></label>
+    <label for="check_fourth"></label>
+    <div class="img">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
