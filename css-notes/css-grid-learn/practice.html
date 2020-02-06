@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid布局练习</title>
+</head>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    .container {
+        display: grid;
+        height: 100%;
+        grid-template-rows: 100px 1fr 30px;
+        grid-row-gap: 10px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-column-gap: 10px;
+    }
+
+    .sidebar,
+    .content,
+    .header,
+    .footer {
+        background-color: #63a7f2;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="header">
+        header
+    </div>
+    <div class="main">
+        <div class="sidebar">sidebar</div>
+        <div class="content">content</div>
+    </div>
+    <div class="footer">
+        Copyright@2020
+    </div>
+</div>
+</body>
+</html>
