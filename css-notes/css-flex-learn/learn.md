@@ -100,4 +100,4 @@
     -  auto | flex-start | flex-end | center | baseline | stretch
     - `align-self`属性允许单个项目有与其他项目不一样的纵轴排列方式，可覆盖`align-items`属性。
 
-参考博客:<a href="http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html">CSS Grid 网格布局教程 - 阮一峰的网络日志</a>
+参考博客:<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇 - 阮一峰的网络日志</a>
