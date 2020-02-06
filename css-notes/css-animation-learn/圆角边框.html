@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角边框</title>
+</head>
+<style>
+    .box1 {
+        width: 200px;
+        height: 200px;
+        border: 2px black solid;
+        /*完整圆角参数 2个参数 8个值 /前表示水平位置  /后表示垂直位置*/
+        /*border-radius: 10px 20px 30px 40px / 10px 20px 30px 40px;*/
+        /*border-radius: 10px 20px 30px 40px;*/
+        /*一个参数两个值 表示对角线*/
+        /*border-radius: 10px 20px;*/
+        border-radius: 10px 10px 0px 0px;
+    }
+    .box2 {
+        height: 400px;
+        width: 200px;
+        border: 2px black solid;
+        border-radius: 0px 0px 10px 10px;
+    }
+</style>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

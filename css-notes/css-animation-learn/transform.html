@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+</head>
+<style>
+    .box{
+        height: 103px;
+        width: 643px;
+        border: 1px red solid;
+        margin: 100px auto;
+        background: url("./javajb.png") no-repeat;
+        transition: all 0.5s;
+    }
+
+    .box:hover {
+        /*transform: translate(0, -10px);*/
+        /*transform: rotate(20deg);*/
+        /*水平 垂直 agr[0]水平 arg[1]垂直*/
+        transform: scale(1.1, 1.1);
+    }
+
+    .box > div {
+        float: left;
+        width: 140px;
+        margin-left: 20px;
+    }
+
+    .box > div > p:first-child {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #FFAB00 !important;
+        text-align: center;
+    }
+
+    .box >div >p:nth-child(2) {
+        color: #8492A6;
+        text-align: center;
+    }
+</style>
+<body>
+<div class="box">
+    <div>
+        <p>350小时+</p>
+        <p>视频教程</p>
+    </div>
+    <div>
+        <p>800个+</p>
+        <p>教学案例</p>
+    </div>
+    <div>
+        <p>340个+</p>
+        <p>辅助资料</p>
+    </div>
+    <div>
+        <p>460个+</p>
+        <p>练习作业</p>
+    </div>
+</div>
+</body>
+</html>

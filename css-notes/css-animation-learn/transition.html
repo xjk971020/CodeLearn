@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画过渡</title>
+</head>
+<style>
+    /*
+        transition:property duration timing-function delay
+        property:过度的属性
+        duration:过渡的时间
+        timing-function:过度函数
+            linear 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+            ease 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+            ease-in 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+            ease-out 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+            ease-in-out 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+        delay: 延时
+    */
+    .box {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        transition: all 1s linear 1s;
+    }
+
+    .box:hover {
+        width: 100px;
+        height: 300px;
+        transform: translate(10px,10px);
+        background-color: #333333;
+        box-shadow: 0px 0px 2px 1px #333333;
+    }
+</style>
+<body>
+<div class="box"></div>
+</body>
+</html>

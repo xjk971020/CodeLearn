@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>径向渐变</title>
+</head>
+<style>
+    .box1 {
+        width: 200px;
+        height: 300px;
+        border: 1px red solid;
+        margin: 100px auto;
+        /*
+        中心: at center center
+            语法:at x y 皆以左上角为参考点
+            x y可以是像素也可以是百分比
+        大小
+            最近边 closest-side
+            最远边 farthest-side
+            最近角 closest-conner
+            最远角 farthest-corner
+        形状
+            ellipse 椭圆
+            circle 圆形
+         */
+        /*background: radial-gradient(at 20% 20%,rebeccapurple,blue);*/
+        background: radial-gradient(farthest-corner circle at 20% 20%,rebeccapurple,blue);
+    }
+</style>
+<body>
+<div class="box1"></div>
+</body>
+</html>

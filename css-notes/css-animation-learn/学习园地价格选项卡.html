@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习园地价格选项卡</title>
+</head>
+<style>
+    #box {
+        margin: 30px auto;
+        width: 360px;
+        height: 42px;
+        color: #FFFFFF;
+        text-align: center;
+        /*position: relative;*/
+    }
+
+    #box > div {
+        float: left;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        font-size: 16px;
+        width: 120px;
+        position: relative;
+    }
+
+    #box > div:first-child {
+        background-color: #63a7f2;
+        border-radius: 10px 0 0 0;
+    }
+
+    #box > div{
+        cursor: pointer;
+    }
+
+    #box > div:nth-child(2) {
+        background-color: #009764;
+    }
+
+    #box > div:nth-child(3) {
+        background: linear-gradient(50deg, #da1941 0, #ce0e36 100%) !important;
+        border-radius: 0 10px 0 0;
+    }
+
+    #box > div:hover > {
+        color: #666;
+    }
+
+    #box > div:nth-child(2):hover > div {
+        display: block;
+    }
+
+    #box > div:nth-child(3):hover > div {
+        display: block;
+    }
+
+    #box > div:nth-child(2) > div,
+    #box > div:nth-child(3) > div {
+        display: none;
+    }
+
+    #box > div > div {
+        position: absolute;
+        width: 360px;
+        height: 80px;
+        border-radius: 0 0 10px 10px;
+        top: 33px;
+    }
+
+    #box > div:nth-child(1) > div {
+        background-color: #63a7f2;
+    }
+
+    #box > div:nth-child(2) > div {
+        position: absolute;
+        left: -120px;
+        background: linear-gradient(50deg, #00a86f 0, #007c52 100%) !important;
+    }
+
+    #box > div:nth-child(3) > div {
+        background: linear-gradient(50deg, #ff3b64 0, #c00029 100%) !important;
+        position: absolute;
+        left: -240px;
+    }
+
+    #box > div > div > span {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-right: 16px;
+        margin-top: 15px;
+    }
+    #box > div > div > button {
+        border: 0;
+        width: 98px;
+        height: 38px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        cursor: pointer;
+    }
+
+    #box > div > div > button:hover {
+        background-color: #eeeeee;
+    }
+
+</style>
+<body>
+<div id="box">
+    <div>
+        永久
+        <div>
+            <span>￥1024元</span>
+            <button>立即购买</button>
+        </div>
+    </div>
+    <div>
+        3学科组合
+        <div>
+            <span>￥2048元</span>
+            <button>立即购买</button>
+        </div>
+    </div>
+    <div>
+        VIP1对1
+        <div>
+            <span>￥4096元</span>
+            <button>立即购买</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

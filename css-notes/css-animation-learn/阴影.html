@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字阴影</title>
+</head>
+<style>
+    .box1 {
+        font-size: 80px;
+        text-align: center;
+        margin-top: 200px;
+        /**
+        第一个参数:横向偏移位置
+        第二个参数:纵向偏移位置
+        第三个参数:模糊度
+        第四个参数颜色
+        阴影可以叠加
+         */
+        text-shadow: 1px 1px 3px red, 2px 2px 3px orange;
+    }
+
+    .box2 {
+        width: 200px;
+        height: 200px;
+        /*
+        arg[1]:水平偏移
+        arg[2]:垂直偏移
+        arg[3]:模糊度
+        arg[4]:阴影大小
+        arg[5]:阴影位置 内阴影，外阴影
+        arg[6]:颜色 默认黑色
+         */
+        box-shadow: 0px 0px 5px 2px inset orange;
+    }
+
+    .rainbow {
+        margin: 20px auto;
+        /*border: 1px solid red;*/
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0px 0px 5px 3px red,
+        0px 0px 5px 5px orange,
+        0px 0px 5px 5px yellow,
+        0px 0px 5px 5px green,
+        0px 0px 5px 5px blue,
+        0px 0px 5px 5px darkblue,
+        0px 0px 5px 5px purple;
+    }
+</style>
+<body>
+<div class="box1">
+    文字阴影
+</div>
+<div class="box2">
+</div>
+<div class="rainbow"></div>
+</body>
+</html>
